@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+/* ASIDE */
+
+/* NAV-MOBILE */
+
+aside{
+    width: 100%;
+}
+
+nav.menu-mobile{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+aside nav.menu-mobile div{
+    display: flex;
+    align-items: center;
+}
+
+aside nav.menu-mobile .hamburguer-menu{
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    background-image: url('../images/icon-menu.svg');
+    background-size: cover;
+    cursor: pointer;
+}
+
+aside nav.menu-mobile .logo{
+    width: 138px;
+    height: 20px;
+    background-image: url('../images/logo.svg');
+    background-size: cover;
+    margin-left: 12px;
+}
+
+aside nav.menu-mobile .cart{
+    width: 22px;
+    height: 20px;
+    background-image: url('../images/icon-cart.svg');
+    background-size: cover;
+    cursor: pointer;
+}
+
+aside nav.menu-mobile .avatar{
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/image-avatar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+/* ***** */
+
+/* ##### */
