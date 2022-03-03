@@ -9,6 +9,7 @@
 
 html, body{
     height: 100%;
+    padding: 0;
 }
 
 :root{
@@ -28,7 +29,11 @@ aside{
     width: 100%;
 }
 
-nav.menu-mobile{
+aside nav.menu-desktop{
+    display: none;
+}
+
+aside nav.menu-mobile{
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -131,8 +136,80 @@ aside nav.menu-mobile div.toggle-menu ul li a{
 
 @media only screen and (min-width: 1440px) {
 
-    nav.menu-mobile{
+    html, body{
+        padding: 0 2%;
+    }
+
+    aside{
+        border-bottom: 2px solid var(--Light-grayish-blue);
+    }
+
+    aside nav.menu-mobile{
         display: none;
+    }
+
+    aside nav.menu-desktop{
+        padding: 30px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    aside nav.menu-desktop div{
+        display: flex;
+        align-items: center;
+    }
+
+    aside nav.menu-desktop .logo{
+        width: 138px;
+        height: 20px;
+        background-image: url('../images/logo.svg');
+        background-size: cover;
+        margin-left: 12px;
+    }
+
+    aside nav.menu-desktop ul{
+        list-style: none;
+        margin-left: 60px;
+    }
+    
+    aside nav.menu-desktop ul li{
+        display: inline-block;
+        margin: 0 5px;
+    }
+    
+    aside nav.menu-desktop ul li a{
+        padding-bottom: 36px;
+        text-decoration: none;
+        font-size: 1rem;
+        color: var(--Dark-grayish-blue);
+    }
+    
+    aside nav.menu-desktop ul li a:hover{
+        color: var(--Very-dark-blue);
+        border-bottom: 2px solid orangered;
+    }
+
+    aside nav.menu-desktop .cart{
+        width: 22px;
+        height: 20px;
+        background-image: url('../images/icon-cart.svg');
+        background-size: cover;
+        cursor: pointer;
+    }
+    
+    aside nav.menu-desktop .avatar{
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        background-image: url('../images/image-avatar.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        margin-left: 40px;
+    }
+    
+    aside nav.menu-desktop .avatar:hover{
+        border: 1px solid orangered;
     }
 
 }
