@@ -73,11 +73,16 @@ aside nav.menu-mobile .cart{
 aside nav.menu-mobile .avatar{
     width: 20px;
     height: 20px;
+    border-radius: 20px;
     background-image: url('../images/image-avatar.png');
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
     margin-left: 12px;
+}
+
+aside nav.menu-mobile .avatar:hover{
+    outline: 1px solid orangered;
 }
 
 aside nav.menu-mobile div.toggle-menu{
@@ -134,7 +139,7 @@ aside nav.menu-mobile div.toggle-menu ul li a{
 
 /* ==DESKTOP== */
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
 
     html, body{
         padding: 0 2%;
@@ -209,7 +214,7 @@ aside nav.menu-mobile div.toggle-menu ul li a{
     }
     
     aside nav.menu-desktop .avatar:hover{
-        border: 1px solid orangered;
+        outline: 1px solid orangered;
     }
 
 }
