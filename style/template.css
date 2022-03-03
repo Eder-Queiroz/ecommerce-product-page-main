@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', monospace;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Space Mono', monospace;
+}
+
+html, body{
+    height: 100%;
+}
+
+:root{
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+}
+
+/* ASIDE */
+
+/* NAV-MOBILE */
+
+aside{
+    width: 100%;
+}
+
+nav.menu-mobile{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+aside nav.menu-mobile div{
+    display: flex;
+    align-items: center;
+}
+
+aside nav.menu-mobile .hamburguer-menu{
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    background-image: url('../images/icon-menu.svg');
+    background-size: cover;
+    cursor: pointer;
+}
+
+aside nav.menu-mobile .logo{
+    width: 138px;
+    height: 20px;
+    background-image: url('../images/logo.svg');
+    background-size: cover;
+    margin-left: 12px;
+}
+
+aside nav.menu-mobile .cart{
+    width: 22px;
+    height: 20px;
+    background-image: url('../images/icon-cart.svg');
+    background-size: cover;
+    cursor: pointer;
+}
+
+aside nav.menu-mobile .avatar{
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/image-avatar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+aside nav.menu-mobile div.toggle-menu{
+    width: 60%;
+    height: 100vh;
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+body.hide-menu{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.hide-menu aside nav.menu-mobile div.toggle-menu{
+    display: flex;
+}
+
+aside nav.menu-mobile div.toggle-menu .close-menu{
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/icon-close.svg);
+    background-size: cover;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+aside nav.menu-mobile div.toggle-menu ul{
+    list-style: none;
+}
+
+aside nav.menu-mobile div.toggle-menu ul li{
+    margin: 10px 0;
+}
+
+aside nav.menu-mobile div.toggle-menu ul li a{
+    text-decoration: none;
+    color: var(--Very-dark-blue);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* ***** */
+
+/* ##### */
