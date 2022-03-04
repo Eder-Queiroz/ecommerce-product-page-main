@@ -8,8 +8,15 @@
 }
 
 html, body{
-    height: 100%;
+    height: 100vh;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 40vh 1fr;
+    grid-template-areas: 
+    'header'
+    'images' 
+    'content';
 }
 
 :root{
@@ -34,6 +41,7 @@ aside nav.menu-desktop{
 }
 
 aside nav.menu-mobile{
+    grid-area: header;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -135,6 +143,103 @@ aside nav.menu-mobile div.toggle-menu ul li a{
 
 /* ##### */
 
+/* MAIN */
+
+/* IMAGES */
+
+body section.carousel-image{
+    grid-area: images;
+}
+
+body section.carousel-image div.carousel{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ARROWS-CAROUSEL */
+
+body section.carousel-image div.carousel .arrows{
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 9;
+}
+
+body section.carousel-image div.carousel div.arrow-back{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+body section.carousel-image div.carousel div.arrow-next{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+body section.carousel-image div.carousel div.arrow-back .image-arrow-back{
+    width: 14px;
+    height: 14px;
+    background-image: url('../images/icon-previous.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 2px;
+}
+
+body section.carousel-image div.carousel div.arrow-next .image-arrow-next{
+    width: 14px;
+    height: 14px    ;
+    background-image: url('../images/icon-next.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 6px;
+}
+
+/* ***** */
+
+body section.carousel-image div.carousel div.container{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+body section.carousel-image div.carousel div.container img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+}
+
+/* ***** */
+
+/* CONTENT */
+
+body section.content{
+    grid-area: content;
+    width: 100%;
+    height: 100%;
+}
+
+/* ***** */
+
+/* ##### */
+
 /* ==== */
 
 /* ==DESKTOP== */
@@ -154,6 +259,7 @@ aside nav.menu-mobile div.toggle-menu ul li a{
     }
 
     aside nav.menu-desktop{
+        grid-area: header;
         padding: 30px 20px;
         display: flex;
         justify-content: space-between;
